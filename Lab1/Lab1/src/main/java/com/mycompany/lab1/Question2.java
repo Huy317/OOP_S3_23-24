@@ -4,6 +4,8 @@
  */
 package com.mycompany.lab1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -15,7 +17,7 @@ public class Question2 {
 
     public Question2() {
     }
-
+    
     public Question2(int a, int b, int c) {
         this.a = a;
         this.b = b;
@@ -23,5 +25,5 @@ public class Question2 {
     }
     public int MinimumNumber(){
         return Math.min(Math.min(a, b), c);
-    }    
+    }
 }

@@ -11,6 +11,8 @@ package com.mycompany.lab1;
 public class Lab1 {
      public static void main(String[] args) {
         //System.out.println(new Question1(123456).SumFirstLastDigit());
-        System.out.println(new Question2(4,3,2).MinimumNumber());
+        //System.out.println(new Question2(4,3,2).MinimumNumber());
+        new Question3(5).HailstoneSequence();
+        
     }
 }
