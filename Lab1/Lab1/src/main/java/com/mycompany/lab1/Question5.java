@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Question5 {
     private ArrayList<Integer> arrlist = new ArrayList<>();
-
+    
     public Question5() {
     }
 
@@ -49,18 +49,33 @@ public class Question5 {
         }
         return max;
     }
-    public void FindDuplicate(){
+    public ArrayList FindDuplicate(){
+        ArrayList<Integer> duplicate = new ArrayList<>();
         int[] counter = new int[FindMaxValue()+1];
         for (int i = 0; i<arrlist.size();i++){
             counter[arrlist.get(i)] += 1;
+            //System.out.println(arrlist.get(i)+"="+counter[arrlist.get(i)]);
         }
+        
         for (int i = 0;i<counter.length;i++){
             if (counter[i] > 1){
-                System.out.print(i+" ");
+                for (int v = 1;v<=counter[i]-1;v++){
+                    duplicate.add(i);
+                }
+                //System.out.println(i+"="+counter[i]);
             }
         }
+        //OutputArray(duplicate);
+        return duplicate;
     }
     
+    public void RemoveDuplicate(){
+        ArrayList<Integer> duplicate = FindDuplicate();
+        for (int i = 0; i<duplicate.size();i++){
+            arrlist.remove(arrlist.indexOf(duplicate.get(i)));
+        }
+        //OutputArray(arrlist);
+    }
     
     Scanner sc = new Scanner(System.in);
     public void Input(){
@@ -75,6 +90,11 @@ public class Question5 {
     public void Output(){
         for (int i = 0; i<arrlist.size();i++){
             System.out.print(arrlist.get(i)+" ");
+        }
+    }
+    public void OutputArray(ArrayList arr){
+        for (int i = 0; i<arr.size();i++){
+            System.out.print(arr.get(i)+" ");
         }
     }
 }

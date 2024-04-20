@@ -22,8 +22,9 @@ public class Lab1 {
        q5.Input();
        //System.out.println(q5.RemoveFirstSpecific(5));
        //q5.InsetToPosition(10, 2);
-       q5.FindDuplicate();
-       //q5.Output();
+       //q5.OutputArray(q5.FindDuplicate());
+       q5.RemoveDuplicate();
+       q5.Output();
         
         
     }
