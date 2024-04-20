@@ -21,7 +21,7 @@ public class Question5 {
     public Question5(ArrayList<Integer> arrlist) {
         this.arrlist = arrlist;
     }
-
+    
     public boolean RemoveFirstSpecific(int n) {
         if (arrlist.contains(n) == false) {
             return false;
@@ -35,7 +35,7 @@ public class Question5 {
         return true;
     }
     
-    // Put a number in to a position, the old number will be replaced the last postion
+    // Put a number in to a position, the number in the last position will be replaced by the old number
     public void InsertToPosition(int n, int pos) {
         int curr = arrlist.get(pos);
         arrlist.remove(pos);
