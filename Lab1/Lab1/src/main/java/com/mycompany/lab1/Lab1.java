@@ -4,6 +4,7 @@
 
 package com.mycompany.lab1;
 
+
 /**
  *
  * @author Student
@@ -20,7 +21,10 @@ public class Lab1 {
        Question5 q5 = new Question5();
        q5.Input();
        //System.out.println(q5.RemoveFirstSpecific(5));
-       q5.InsetToPosition(10, 2);
-       q5.Output();
+       //q5.InsetToPosition(10, 2);
+       q5.FindDuplicate();
+       //q5.Output();
+        
+        
     }
 }

@@ -40,6 +40,28 @@ public class Question5 {
         arrlist.remove(arrlist.size()-1);
         arrlist.add(curr);
     }
+    private int FindMaxValue(){
+        int max = arrlist.get(0);
+        for (int i = 0; i<arrlist.size();i++){
+            if (arrlist.get(i)>max){
+                max = arrlist.get(i);
+            }
+        }
+        return max;
+    }
+    public void FindDuplicate(){
+        int[] counter = new int[FindMaxValue()+1];
+        for (int i = 0; i<arrlist.size();i++){
+            counter[arrlist.get(i)] += 1;
+        }
+        for (int i = 0;i<counter.length;i++){
+            if (counter[i] > 1){
+                System.out.print(i+" ");
+            }
+        }
+    }
+    
+    
     Scanner sc = new Scanner(System.in);
     public void Input(){
         System.out.print("Input size of array: ");
