@@ -9,5 +9,5 @@ package com.mycompany.lab1;
  * @author Student
  */
 public class Question1 {
-    
+    int a = 0;
 }
