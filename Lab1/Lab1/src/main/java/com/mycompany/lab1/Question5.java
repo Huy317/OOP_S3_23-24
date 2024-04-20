@@ -33,7 +33,7 @@ public class Question5 {
         }
         return true;
     }
-    public void InsetToPosition(int n, int pos){
+    public void InsertToPosition(int n, int pos){
         int curr = arrlist.get(pos);
         arrlist.remove(pos);
         arrlist.add(pos,n);
