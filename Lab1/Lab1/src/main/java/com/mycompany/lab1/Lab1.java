@@ -17,5 +17,10 @@ public class Lab1 {
         //System.out.println(new Question2(4,3,2).MinimumNumber());
         //new Question3(5).HailstoneSequence();
        //System.out.println(new Question4(new int[]{1,2,2,2,6,10}).SumEvenNumbers());
+       Question5 q5 = new Question5();
+       q5.Input();
+       //System.out.println(q5.RemoveFirstSpecific(5));
+       q5.InsetToPosition(10, 2);
+       q5.Output();
     }
 }
