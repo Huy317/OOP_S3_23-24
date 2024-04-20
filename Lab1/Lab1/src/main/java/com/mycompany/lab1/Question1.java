@@ -19,7 +19,7 @@ public class Question1 {
     public int SumFirstLastDigit(){
         int lastDigit = number%10;
         int firstDigit = number;
-        while (firstDigit>10){
+        while (firstDigit>=10){
             firstDigit/=10;
         }
         return lastDigit + firstDigit;
