@@ -26,4 +26,11 @@ public class Question2 {
     public int MinimumNumber(){
         return Math.min(Math.min(a, b), c);
     }
+    Scanner sc = new Scanner(System.in);
+    public void Input(){
+        System.out.print("Input 3 numbers: ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+    }
 }

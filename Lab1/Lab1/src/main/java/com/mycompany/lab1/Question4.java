@@ -4,6 +4,8 @@
  */
 package com.mycompany.lab1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -25,5 +27,15 @@ public class Question4 {
             }
         }
         return sum;
+    }
+    Scanner sc = new Scanner(System.in);
+    public void Input(){
+        System.out.print("Input size of array: ");
+        int n = sc.nextInt();
+        arr = new int[n];
+        for (int i = 0; i<n;i++){
+            System.out.print("Input number: ");
+            arr[i] = sc.nextInt();
+        }
     }
 }

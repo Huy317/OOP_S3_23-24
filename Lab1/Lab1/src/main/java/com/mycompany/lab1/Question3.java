@@ -4,6 +4,8 @@
  */
 package com.mycompany.lab1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -27,5 +29,10 @@ public class Question3 {
                 n = 3*n+1;
             }
         }
+    }
+    Scanner sc = new Scanner(System.in);
+    public void Input(){
+        System.out.print("Input a number: ");
+        n = sc.nextInt();
     }
 }
