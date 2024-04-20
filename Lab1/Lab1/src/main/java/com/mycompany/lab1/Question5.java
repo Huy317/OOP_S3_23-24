@@ -34,7 +34,8 @@ public class Question5 {
         }
         return true;
     }
-
+    
+    // Put a number in to a position, the old number will be replaced the last postion
     public void InsertToPosition(int n, int pos) {
         int curr = arrlist.get(pos);
         arrlist.remove(pos);
@@ -42,7 +43,8 @@ public class Question5 {
         arrlist.remove(arrlist.size() - 1);
         arrlist.add(curr);
     }
-
+    
+    // Find the max value to be used for array size
     private int FindMaxValue() {
         int max = arrlist.get(0);
         for (int i = 0; i < arrlist.size(); i++) {
@@ -55,21 +57,21 @@ public class Question5 {
 
     public ArrayList FindDuplicate() {
         ArrayList<Integer> duplicate = new ArrayList<>();
-        int[] counter = new int[FindMaxValue() + 1];
+        int[] counter = new int[FindMaxValue() + 1]; // Create an array to store how many times a value appear
+        
+        // Storing values and the times they appear
         for (int i = 0; i < arrlist.size(); i++) {
             counter[arrlist.get(i)] += 1;
-            //System.out.println(arrlist.get(i)+"="+counter[arrlist.get(i)]);
         }
-
+        
+        // Insert duplicate values to be removed later into an ArrayList
         for (int i = 0; i < counter.length; i++) {
             if (counter[i] > 1) {
                 for (int v = 1; v <= counter[i] - 1; v++) {
                     duplicate.add(i);
                 }
-                //System.out.println(i+"="+counter[i]);
             }
         }
-        //OutputArray(duplicate);
         return duplicate;
     }
 
@@ -78,7 +80,6 @@ public class Question5 {
         for (int i = 0; i < duplicate.size(); i++) {
             arrlist.remove(arrlist.indexOf(duplicate.get(i)));
         }
-        //OutputArray(arrlist);
     }
 
     Scanner sc = new Scanner(System.in);
@@ -92,13 +93,15 @@ public class Question5 {
         }
 
     }
-
+    
+    // Print only the main List
     public void Output() {
         for (int i = 0; i < arrlist.size(); i++) {
             System.out.print(arrlist.get(i) + " ");
         }
     }
-
+    
+    // Print any list passed in
     public void OutputArray(ArrayList arr) {
         for (int i = 0; i < arr.size(); i++) {
             System.out.print(arr.get(i) + " ");
