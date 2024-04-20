@@ -4,6 +4,8 @@
  */
 package com.mycompany.lab1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -24,5 +26,10 @@ public class Question1 {
         }
         return lastDigit + firstDigit;
         
+    }
+    Scanner sc = new Scanner(System.in);
+    public void Input(){
+        System.out.print("Input a number: ");
+        number = sc.nextInt();
     }
 }
