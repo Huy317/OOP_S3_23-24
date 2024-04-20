@@ -12,7 +12,8 @@ public class Lab1 {
      public static void main(String[] args) {
         //System.out.println(new Question1(123456).SumFirstLastDigit());
         //System.out.println(new Question2(4,3,2).MinimumNumber());
-        new Question3(5).HailstoneSequence();
-        
+        //new Question3(5).HailstoneSequence();
+        int[] arr = new int[]{1,2,2,2,6,10};
+        System.out.println(new Question4(arr).SumEvenNumbers());
     }
 }
